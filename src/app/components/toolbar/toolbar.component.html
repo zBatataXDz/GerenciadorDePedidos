@@ -1,0 +1,19 @@
+<nav class="bg-blue-600 fixed bottom-0 w-full max-w-sm">
+  <div class="flex gap-2 justify-center p-2">
+    <button class="w-16 h-12 bg-green-500">
+      <ng-icon size="20px" name="heroArrowLeft"></ng-icon>
+    </button>
+    <button class="w-32 h-12 bg-yellow-500">
+      <ng-icon size="20px" name="heroPlus"></ng-icon>
+    </button>
+    <button class="w-16 h-12 bg-purple-500" (click)="showFilter()">
+      <ng-icon size="20px" name="heroAdjustmentsHorizontal"></ng-icon>
+    </button>
+  </div>
+</nav>
+
+@if (filter ==! false) {
+<div class="">
+  <app-filter-modal />
+</div>
+}

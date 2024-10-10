@@ -1,0 +1,15 @@
+<div class="flex flex-col">
+  <h1 class="text-center p-4 text-slate-200">Cardápio</h1>
+  <div class="grid grid-cols-2 gap-4 px-4 mb-16">
+    @for (item of produtos; track $index) {
+    <div
+      class="rounded-xl shadow-md shadow-slate-600 py-4 bg-slate-800 text-white flex justify-center items-center text-center"
+    >
+      <ul class="">
+        <li class="uppercase font-bold">{{ item.name }}</li>
+        <li class="">R$ {{ item.price / 100 }}</li>
+      </ul>
+    </div>
+    }
+  </div>
+</div>
